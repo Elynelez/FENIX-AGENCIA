@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 html {
-  transition: background-color 0.3s;
+  transition: background-color 0.1s;
 }
 
 
@@ -13,6 +13,13 @@ html.light {
 
 html.dark {
   @apply bg-gray-900 text-white;
+}
+
+html.dark .container-slider div{
+  @apply bg-gray-800
+}
+html.dark .group-image {
+  @apply bg-gray-800 text-gray-400
 }
 
 @layer components {

@@ -1,8 +1,8 @@
+
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from './components/Navbar/Navbar';
-import SimpleSlider from "./components/Slider/Slider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,9 +22,6 @@ export default function RootLayout({
         <body className={inter.className}>
           <main>
             <Navbar />
-            <div className="max-w-screen-lg mx-auto p-4">
-              <SimpleSlider />
-            </div>
           </main>
           {children}
         </body>

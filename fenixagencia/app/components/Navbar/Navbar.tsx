@@ -1,5 +1,5 @@
 import React from 'react';
-import { IoMdSearch, IoIosHeart } from 'react-icons/io';
+import { IoMdSearch, IoIosHeart, IoLogoWhatsapp } from 'react-icons/io';
 import { FaCaretDown } from "react-icons/fa";
 import Darkmode from './Darkmode';
 
@@ -19,11 +19,11 @@ const MenuLinks = [
     name: "Sobre nosotros",
     link: "/about"
   },
-  {
-    id: 4,
-    name: "Solicitud especial",
-    link: "/special"
-  }
+  // {
+  //   id: 4,
+  //   name: "Solicitud especial",
+  //   link: "/special"
+  // }
 ]
 
 const DropdownLinks = [
@@ -45,9 +45,15 @@ const Navbar = () => {
       <div className='PY-4'>
         <div className="container flex justify-between items-center">
           <div className='flex items-center gap-4'>
-            <a href="#" className='dark:text-white stext-black font-semibold tracking-widest text 2xl uppercase sm:text-3xl'>
-              INDUCOR FENIX
-            </a>
+            <div className='dark:text-white stext-black font-semibold tracking-widest text 2xl uppercase sm:text-3xl'>
+              <a href="#" >
+                INDUCOR FENIX
+              </a>
+              <a href="" className="flex items-center gap-2 text-base sm:text-sm">
+                <IoLogoWhatsapp className="w-4 h-4"/>
+                <span>3117892346</span>
+              </a>
+            </div>
             <div className='hidden lg:block'>
               <ul className='flex items-center gap-4'>
                 {
@@ -60,10 +66,9 @@ const Navbar = () => {
                     </li>
                   ))
                 }
-
-                <li className='relative cursor-pointer group'>
+                <li className='relative cursor-pointer group flex items-center gap-2'>
                   <a href="$" className='flex items-center gap-[px] font-semibold text-gray-500 dark:hover:text-white py-2'>
-                    Quick Links
+                    Servicios
                   </a>
                   <div className='absolute z-[9999] hidden group-hover:block w-[200px] rounded-md bg-white shadow-md dark:bg-gray-900 p-2 dark:text-qhite '>
                     <ul className='space-y-2'>
@@ -79,7 +84,7 @@ const Navbar = () => {
                     </ul>
                   </div>
                   <span>
-                    <FaCaretDown className='group-hover:rotate-180 duration-300'/>
+                    <FaCaretDown className='group-hover:rotate-180 duration-300' />
                   </span>
                 </li>
               </ul>
