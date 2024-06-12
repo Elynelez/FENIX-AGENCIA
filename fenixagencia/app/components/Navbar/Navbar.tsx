@@ -93,7 +93,7 @@ const Navbar = () => {
           <div className='flex justify-between items-center gap-4'>
             <div className='relative group hidden sm:block'>
               <input type="text" placeholder='search' className='search-bar' />
-              <IoMdSearch className='text-xl text-gray-600 group-hover:text-pretty dark:text-gray-400 absolute top-1/2 -translate-y-1/2 right-3 duration-200' />
+              <IoMdSearch className='text-xl text-gray-600 group-hover:text-pretty dark:text-gray-400 absolute top-1/2 -translate-y-1/2 right-1 duration-200' />
             </div>
             <button className='relative p-3'>
               <IoIosHeart className='text-xl text-gray-600 dark:text-gray-400' />

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from 'react';
+import { IoIosHeart, IoLogoWhatsapp, IoIosStar } from 'react-icons/io';
 import girls from '../../girls.json'
 
 type Girl = {
@@ -45,8 +46,10 @@ const ProductPage = ({ params }: {
           {data.description}
         </p>
         <h6 className='text-2xl font-semibold'>{data.price}<span>/hora</span></h6>
-        <div className='flex flex-row items-center gap-12'>
-          <button className='bg-violet-800 text-white font-semibold py-3 px-16 rounded-xl h-full' onClick={() => setAmount((prev) => prev + 1)}>Añadir a favoritos</button>
+        <div className='flex flex-row items-center gap-10'>
+          <button className='bg-violet-800 text-white font-semibold py-4 px-16 rounded-xl h-full' onClick={() => setAmount((prev) => prev + 1)}><IoIosHeart /></button>
+          <button className='bg-green-800 text-white font-semibold py-4 px-16 rounded-xl h-full' onClick={() => setAmount((prev) => prev + 1)}><IoLogoWhatsapp /></button>
+          <button className='bg-gray-800 text-white font-semibold py-4 px-16 rounded-xl h-full' onClick={() => setAmount((prev) => prev + 1)}><IoIosStar /></button>
         </div>
       </div>
     </div>
