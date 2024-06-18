@@ -9,7 +9,7 @@ const SearchPage = ({ params }: { params: { query: string } }) => {
 
   return (
     <div>
-      <h1>Resultados para "{query}"</h1>
+      <h1 className="text-3xl font-bold text-center mb-4 text-gray-500 dark:text-white">Resultados para "{query}"</h1>
       <div className="min-h-screen flex flex-col">
         <main className="flex-grow p-4">
           <div className="text-gray-600 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">

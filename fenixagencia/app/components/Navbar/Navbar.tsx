@@ -1,10 +1,11 @@
 "use client";
 
-import React, { useState, FormEvent } from 'react';
+import React, { useState, FormEvent, useEffect } from 'react';
 import { IoMdSearch, IoIosHeart, IoLogoWhatsapp } from 'react-icons/io';
 import { FaCaretDown } from "react-icons/fa";
 import { useRouter } from 'next/navigation';
 import Darkmode from './Darkmode';
+import { useLocalStorage } from '../LocalStorage/LocalStorage';
 
 const MenuLinks = [
   {
@@ -53,6 +54,7 @@ const DropdownLinks = [
 ]
 
 const Navbar = () => {
+  const [favIcon, setFavIcon] = useLocalStorage('fav', 0)
   const [searchTerm, setSearchTerm] = useState('');
   const router = useRouter();
 
@@ -65,11 +67,11 @@ const Navbar = () => {
 
   return (
     <div className="dark:bg-gray-900 dark:text-white duration-200 relative z-40">
-      <div className='PY-4'>
+      <div className='py-4'>
         <div className="container flex justify-between items-center">
           <div className='flex items-center gap-4'>
             <div className='dark:text-white stext-black font-semibold tracking-widest text 2xl uppercase sm:text-3xl'>
-              INDUCOR FENIX
+              INDUCOR
             </div>
             <div className='hidden lg:block'>
               <ul className='flex items-center gap-4'>
@@ -128,7 +130,7 @@ const Navbar = () => {
             </div>
             <button className='relative p-3'>
               <IoIosHeart className='text-xl text-gray-600 dark:text-gray-400' />
-              <div className='w-4 h-4 bg-red-500 text-white rounded-full absolute top-0 right-0 flex items-center justify-center text-xs'>4</div>
+              <div className='w-4 h-4 bg-red-500 text-white rounded-full absolute top-0 right-0 flex items-center justify-center text-xs'>{favIcon.length}</div>
             </button>
             <div>
               <Darkmode />
